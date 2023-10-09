@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Project-LabFala</string>
+    <string name="lab_fala">LAB FALA\n</string>
+    <string name="avalia_o_de_fala_infantil">AVALIAÇÃO DE FALA INFANTIL\n</string>
+    <string name="gravar">GRAVAR\n</string>
+    <string name="capturar">Capturar</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="#4D4F9BA2"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:fontFamily="@font/bungee"
+        android:text="@string/lab_fala"
+        android:textColor="#005359"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="262dp"
+        android:layout_height="232dp"
+        android:background="#00FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444">
+
+        <ImageView
+            android:id="@+id/botao1"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/avaliacaoo_play" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="226dp"
+            android:layout_height="98dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/bungee"
+            android:paddingStart="15dp"
+            android:paddingTop="0dp"
+            android:text="@string/avalia_o_de_fala_infantil"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            tools:ignore="RtlSymmetry,TextSizeCheck" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
