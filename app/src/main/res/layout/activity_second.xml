@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#4D4F9BA2"
+    android:layout_height="match_parent"
+    tools:context=".Second">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="162dp"
+        android:layout_height="257dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943" />
+
+    <Button
+        android:id="@+id/image_capture_button"
+        android:layout_width="177dp"
+        android:layout_height="77dp"
+        android:backgroundTint="#005359"
+        android:elevation="2dp"
+        android:fontFamily="@font/bungee"
+        android:text="@string/take_photo"
+        android:textSize="18sp"
+        app:cornerRadius="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/video_capture_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/video_capture_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
+
+    <Button
+        android:id="@+id/video_capture_button"
+        android:layout_width="183dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#005359"
+        android:elevation="2dp"
+        android:fontFamily="@font/bungee"
+        android:text="@string/start_capture"
+        android:textSize="20sp"
+        app:cornerRadius="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="117dp"
+        android:layout_height="95dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:layout_constraintVertical_bias="0.522"
+        app:srcCompat="@drawable/next" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="117dp"
+        android:layout_height="95dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        android:rotationY="178"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="496dp"
+        android:layout_height="357dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078"
+        app:srcCompat="@drawable/image" />
+</androidx.constraintlayout.widget.ConstraintLayout>
