@@ -7,6 +7,8 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
@@ -58,6 +60,12 @@ class Second : AppCompatActivity() {
         }
     }
 
+    private lateinit var imageView: ImageView
+    private lateinit var nextButton: Button
+    private lateinit var previousButton: Button
+    private var imageList: List<String> = ArrayList()
+
+    private var currentImageIndex = 0
     private var imageCapture: ImageCapture? = null
     private var videoCapture: VideoCapture<Recorder>? = null
     private var recording: Recording? = null
@@ -277,6 +285,5 @@ class Second : AppCompatActivity() {
 
             image.close()
         }
-
     }
 }
