@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".Second">
 
+
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
         android:layout_width="140dp"
@@ -31,16 +32,16 @@
         app:cornerRadius="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/video_capture_button"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="@+id/video_capture_button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <Button
         android:id="@+id/video_capture_button"
-        android:layout_width="154dp"
-        android:layout_height="64dp"
+        android:layout_width="150dp"
+        android:layout_height="81dp"
         android:backgroundTint="#005359"
         android:elevation="2dp"
         android:fontFamily="@font/bungee"
@@ -77,16 +78,16 @@
         android:rotationY="178"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551"
+        app:layout_constraintVertical_bias="0.633"
         app:srcCompat="@drawable/back" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="476dp"
-        android:layout_height="435dp"
+        android:id="@+id/image_gifs"
+        android:layout_width="617dp"
+        android:layout_height="675dp"
         android:contentDescription="@string/todooo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

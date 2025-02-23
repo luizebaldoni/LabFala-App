@@ -3,9 +3,9 @@
     <string name="lab_fala">LAB FALA</string>
     <string name="todo">\nAVALIAÇÃO DE FALA INFANTIL\n</string>
     <string name="avalia_o_de_fala_infantil">AVALIAÇÃO DE FALA INFANTIL\n</string>
-    <string name="take_photo">SALVAR E ENVIAR</string>
+    <string name="take_photo">SALVAR</string>
     <string name="start_capture">GRAVAR \n\n</string>
-    <string name="stop_capture">parar captura\n</string>
+    <string name="stop_capture">PARAR \n</string>
     <string name="back">VOLTAR</string>
     <string name="next">AVANÇAR</string>
     <string name="imagens">imagens</string>
