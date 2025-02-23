@@ -1,9 +1,20 @@
 # LabFala App
-- Este aplicativo esta sendo desenvolvido por Luize Baldoni de Oliveira, acadêmica de Engenharia da Computação da UFSM, para uso do app no Laboratório da Fala da Universidade Federal de Santa Maria!
 
-## Aplicativo
-- O app esta sendo desenvolvido no Android Studio na linguagem Kotlin;
-- Os códigos possuem documentação explicando os mesmos, exceto nos .xml pois sao estilizações, fonts, strings e etc.
-- O app começou sendo desenvolvido em Java, porem devido a problemas foi trocado para linguagem Kotlin.
-- O app esta recém em fase inicial, tendo somente a implementação da camera ativa, faltando ainda implementar, banco de dados, login, sistema de acesso ao bd, novas formas de avaliação infantil.
-- Previsão de termino do app esta para ano que vem pois como citado anteriormente ainda ha diversas etapas para concluir;
+## Descrição
+O LabFala App é um aplicativo em desenvolvimento por Luize Baldoni de Oliveira, acadêmica de Engenharia da Computação na UFSM, destinado ao uso no Laboratório da Fala da Universidade Federal de Santa Maria. O projeto visa facilitar a avaliação da fala de crianças de 18 a 36 meses utilizando o PEEPS em pt-BR, adaptado para aplicativo.
+
+## Funcionalidades
+- Implementação da câmera ativa;
+- Vídeo salvo no armazenamento interno do dispositivo;
+- Gifs com animações de palavras do PEEPS.
+
+## Tecnologias Utilizadas
+- **Android Studio**
+- **Kotlin**
+- **CameraX**
+
+## Status do Projeto
+Projeto em fase inicial. As próximas etapas incluem:
+- Implementação de banco de dados;
+- Desenvolvimento do sistema de login e acesso;
+- Desenvolvimento de plataforma para envio de tarefas.
