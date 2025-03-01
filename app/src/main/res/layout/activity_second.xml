@@ -8,7 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".Second">
 
-
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
         android:layout_width="140dp"

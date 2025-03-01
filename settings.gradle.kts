@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Fono_Project"
+rootProject.name = "PEEPS"
 include(":app")
  

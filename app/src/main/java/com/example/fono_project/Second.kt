@@ -70,17 +70,46 @@ class Second : AppCompatActivity() {
             }
         }
     }
-
     // Declaração de views e variáveis para manipulação de GIFs
     private lateinit var image_gifs: ImageView
     private var currentGifIndex = 0
     private val gifs = listOf(
+        R.drawable.blusa,
         R.drawable.bola,
-        R.drawable.carro,
-        R.drawable.cavalo,
+        R.drawable.bolacha,
         R.drawable.bruxa,
-        R.drawable.bolacha
-    )
+        R.drawable.carro,
+        R.drawable.casa,
+        R.drawable.cavalo,
+        R.drawable.chave,
+        R.drawable.chinelo,
+        R.drawable.chupeta,
+        R.drawable.chuva,
+        R.drawable.dedo,
+        R.drawable.dirigir,
+        R.drawable.faca,
+        R.drawable.feliz,
+        R.drawable.galinha,
+        R.drawable.gato,
+        R.drawable.janela,
+        R.drawable.lapis,
+        R.drawable.leite,
+        R.drawable.livro,
+        R.drawable.macaco,
+        R.drawable.mesa,
+        R.drawable.nariz,
+        R.drawable.olho,
+        R.drawable.pato,
+        R.drawable.porco,
+        R.drawable.porta,
+        R.drawable.prato,
+        R.drawable.radio,
+        R.drawable.rato,
+        R.drawable.sapato,
+        R.drawable.sapo,
+        R.drawable.tenis,
+        R.drawable.vaca,
+        )
 
     // Botões para navegação entre GIFs e variáveis para captura de imagem e vídeo
     private lateinit var next: ImageView
