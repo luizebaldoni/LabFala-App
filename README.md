@@ -1,15 +1,9 @@
 # 🗣️ LabFala-App
-
-### 🔹 Aplicação para reconhecimento e análise de fala.
-
-![LabFala-App Banner](https://via.placeholder.com/800x300.png?text=LabFala-App)
-
 ---
 
 ## 📜 Sumário
 
 - [🗣️ LabFala-App](#️-labfala-app)
-    - [🔹 Aplicação para reconhecimento e análise de fala.](#-aplicação-para-reconhecimento-e-análise-de-fala)
   - [📜 Sumário](#-sumário)
   - [📌 Sobre o Projeto](#-sobre-o-projeto)
   - [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
