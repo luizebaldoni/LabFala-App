@@ -39,6 +39,7 @@ import java.util.concurrent.Executors
  * Alias para o listener de luminosidade.
  * @param luma Valor médio da luminosidade da imagem.
  */
+
 typealias LumaListener = (luma: Double) -> Unit
 
 // Activity responsável pela captura de vídeo, manipulação de imagens GIF e análise de luminosidade.
@@ -74,41 +75,19 @@ class Second : AppCompatActivity() {
     private lateinit var image_gifs: ImageView
     private var currentGifIndex = 0
     private val gifs = listOf(
-        R.drawable.blusa,
-        R.drawable.bola,
-        R.drawable.bolacha,
-        R.drawable.bruxa,
-        R.drawable.carro,
-        R.drawable.casa,
-        R.drawable.cavalo,
-        R.drawable.chave,
-        R.drawable.chinelo,
-        R.drawable.chupeta,
-        R.drawable.chuva,
-        R.drawable.dedo,
-        R.drawable.dirigir,
-        R.drawable.faca,
-        R.drawable.feliz,
-        R.drawable.galinha,
-        R.drawable.gato,
-        R.drawable.janela,
-        R.drawable.lapis,
-        R.drawable.leite,
-        R.drawable.livro,
-        R.drawable.macaco,
-        R.drawable.mesa,
-        R.drawable.nariz,
-        R.drawable.olho,
-        R.drawable.pato,
-        R.drawable.porco,
-        R.drawable.porta,
-        R.drawable.prato,
-        R.drawable.radio,
-        R.drawable.rato,
-        R.drawable.sapato,
-        R.drawable.sapo,
-        R.drawable.tenis,
-        R.drawable.vaca,
+        R.drawable.blusa, R.drawable.bola, R.drawable.bolacha, R.drawable.bruxa, R.drawable.carro,
+        R.drawable.casa, R.drawable.cavalo, R.drawable.chave, R.drawable.chinelo, R.drawable.chupeta,
+        R.drawable.chuva, R.drawable.dedo, R.drawable.dirigir, R.drawable.faca, R.drawable.feliz,
+        R.drawable.galinha, R.drawable.gato, R.drawable.janela, R.drawable.lapis, R.drawable.leite,
+        R.drawable.livro, R.drawable.macaco, R.drawable.mesa, R.drawable.nariz, R.drawable.olho,
+        R.drawable.pato, R.drawable.porco, R.drawable.porta, R.drawable.prato, R.drawable.radio,
+        R.drawable.rato, R.drawable.sapato, R.drawable.sapo, R.drawable.tenis, R.drawable.vaca, // fim da lista basica
+        R.drawable.achou, R.drawable.balao, R.drawable.banana, R.drawable.barriga, R.drawable.boca,
+        R.drawable.boneca, R.drawable.cabelo, R.drawable.cama, R.drawable.caminhao, R.drawable.chapeu,
+        R.drawable.colher, R.drawable.copo, R.drawable.dente, R.drawable.elefante, R.drawable.lingua,
+        R.drawable.leao, R.drawable.lua, R.drawable.mamadeira, R.drawable.meia, R.drawable.pe,
+        R.drawable.pente, R.drawable.perna, R.drawable.peixe, R.drawable.sabonete, R.drawable.sol,
+        R.drawable.suco, // fim da lista expandida
         )
 
     // Botões para navegação entre GIFs e variáveis para captura de imagem e vídeo
@@ -124,6 +103,7 @@ class Second : AppCompatActivity() {
      * Inicializa o layout, solicita permissões necessárias, configura a câmera,
      * inicializa botões para captura de vídeo e navegação entre GIFs.
      */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = ActivitySecondBinding.inflate(layoutInflater)
@@ -174,6 +154,7 @@ class Second : AppCompatActivity() {
      * Se já estiver gravando, para a gravação. Caso contrário, inicia uma nova gravação,
      * configurando o MediaStore para salvar o arquivo de vídeo.
      */
+
     private fun captureVideo() {
         val videoCapture = this.videoCapture ?: return
         viewBinding.videoCaptureButton.isEnabled = false
@@ -257,10 +238,13 @@ class Second : AppCompatActivity() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
         cameraProviderFuture.addListener({
+
             // Obtém o provider para vincular os casos de uso ao ciclo de vida
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+
             // Inicializa a captura de imagem
             imageCapture = ImageCapture.Builder().build()
+
             // Configura a análise de imagem para cálculo de luminosidade
             val imageAnalyzer = ImageAnalysis.Builder()
                 .build()
@@ -275,6 +259,7 @@ class Second : AppCompatActivity() {
                 .also {
                     it.setSurfaceProvider(viewBinding.viewFinder.surfaceProvider)
                 }
+
             // Configura o gravador para captura de vídeo com a melhor qualidade disponível
             val recorder = Recorder.Builder()
                 .setQualitySelector(QualitySelector.from(Quality.HIGHEST))
@@ -284,12 +269,15 @@ class Second : AppCompatActivity() {
             // Seleciona a câmera frontal como padrão
             val cameraSelector = CameraSelector.DEFAULT_FRONT_CAMERA
             try {
+
                 // Desvincula quaisquer casos de uso previamente ligados à câmera
                 cameraProvider.unbindAll()
+
                 // Vincula os casos de uso (preview, vídeo e análise) ao ciclo de vida
                 cameraProvider.bindToLifecycle(
                     this, cameraSelector, preview, videoCapture, imageAnalyzer
                 )
+
             } catch (exc: Exception) {
                 Log.e(TAG, "Use case binding failed", exc)
             }
@@ -311,6 +299,7 @@ class Second : AppCompatActivity() {
      * Libera recursos ao destruir a Activity.
      * Encerra o executor da câmera.
      */
+
     override fun onDestroy() {
         super.onDestroy()
         cameraExecutor.shutdown()
@@ -319,6 +308,7 @@ class Second : AppCompatActivity() {
     /**
      * Objeto companion contendo constantes utilizadas na Activity.
      */
+
     companion object {
         private const val TAG = "CameraXApp"
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
